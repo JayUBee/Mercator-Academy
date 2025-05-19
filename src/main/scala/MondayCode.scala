@@ -133,7 +133,27 @@ object MondayCode extends App {
   //END TASK 4
 
   //Task 5
+  class Book(val name: String,
+             val author: String,
+             val yearPublished: Int,
+             var available: Boolean)
+  {
+  def borrowBook(): Unit = {
+    if (available){
+      available = false
+      println(s"$name has been borrowed")
+    }
+    else {println(s"$name is not available")}
+  }
+    def returnBook(): Unit = {
+      available = true
+      println(s"$name has been returned")
+    }
 
+    def displayInfo(): Unit = {
+      println(s"Title: $name, Author: $author, Year Published: $yearPublished, Available: $available")
+    }
+  }
 
   //END TASK 5
   //END MVP TASKS
