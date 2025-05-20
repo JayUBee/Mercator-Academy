@@ -1,9 +1,9 @@
 object TueCollectionCode extends App {
 
-  val firstSet: Set[Int] = Set(1,2,3,4,5, 5) // Not ordered, does not allow repeats
+  val firstSet: Set[Int] = Set(1, 2, 3, 4, 5, 5) // Not ordered, does not allow repeats
   println("First set: " + firstSet)
 
-  val firstSeq: Seq[Int] = Seq(1,2,3,4,5, 5) // Ordered, allows repeat values
+  val firstSeq: Seq[Int] = Seq(1, 2, 3, 4, 5, 5) // Ordered, allows repeat values
   println("First Seq: " + firstSeq)
 
   //Map takes 2 parameters, (Key -> Value). Called Key Value pairs. Key must be unique.
@@ -29,7 +29,7 @@ object TueCollectionCode extends App {
 
   //SET
   val getSetIndex = firstSet(3) //checks if the value (3) is contained in the set
-                               //can also use .contains(3)
+  //can also use .contains(3)
   println("Exist in Set: " + getSetIndex)
 
   //Often filter for information
@@ -54,9 +54,9 @@ object TueCollectionCode extends App {
     1 -> "red",
     2 -> "yellow",
     3 -> "blue",
-    4 -> "green" )
+    4 -> "green")
 
-  val secondSet: Set[Int] = Set (1,2,3,4,5,6,7)
+  val secondSet: Set[Int] = Set(1, 2, 3, 4, 5, 6, 7)
 
   val getMapBlue: String = secondMap(3)
   println("Value for Key(3): " + getMapBlue)
@@ -74,17 +74,20 @@ object TueCollectionCode extends App {
     // _ * 3
     number => number * 3 //both lines mean the same, different way of writing
   }
+
   println("Tripled Set: " + tripledSet(firstSet))
 
   def tripledSeq(inputSeq: Seq[Int]): Seq[Int] = inputSeq.map {
     _ * 3
     // number => number * 3 //both lines mean the same, different way of writing
   }
+
   println("Tripled Seq: " + tripledSeq(firstSeq))
 
   def tripledMap(inputMap: Map[String, Int]): Map[String, Int] = inputMap.map {
-    case (key, value) => (key + " x3", value*3) //can also change the key
+    case (key, value) => (key + " x3", value * 3) //can also change the key
   }
+
   val tripledMapStored = tripledMap(firstMap)
   println("Tripled Map: " + tripledMapStored)
 
@@ -92,18 +95,20 @@ object TueCollectionCode extends App {
   // .contains = (check - true/false - boolean)
 
   //TASK 1 CONTINUATION
-  def addOne(inputSet: Set[Int]): Set[Int] = inputSet.map{
+  def addOne(inputSet: Set[Int]): Set[Int] = inputSet.map {
     _ + 1
   }
+
   println("Set with added 1: " + addOne(secondSet))
 
   def checkForR(inputSeq: Seq[String]): Seq[Boolean] = inputSeq.map {
     _.contains('r')
   }
+
   println("Check if strings contain R: " + checkForR(secondSeq))
 
-  val oddNumbersOnly = secondSet.filter{
-  _ % 2 != 0
+  val oddNumbersOnly = secondSet.filter {
+    _ % 2 != 0
   }
   println("Odd numbers only Set: " + oddNumbersOnly)
   //END TASK 1
@@ -111,7 +116,7 @@ object TueCollectionCode extends App {
   val flatMapNames: Seq[Char] = secondSeq.flatMap(_.toUpperCase)
   println("FlatMap: " + flatMapNames)
 
-  val newSeq: Seq[Int] = Seq(6,7,8)
+  val newSeq: Seq[Int] = Seq(6, 7, 8)
 
   //Append - add to end
   val appendedListOne = firstSeq :+ newSeq
@@ -131,8 +136,91 @@ object TueCollectionCode extends App {
   println(prependValue)
 
 
+  //AFTERNOON TASKS
+  //MVP TASKS
+  //TASK 1
+  val foreNames: Seq[String] = Seq(
+    "Alice",
+    "Bob",
+    "Charlie",
+    "Alice",
+    "David",
+    "Bob")
 
+  // TASK 2
+  println(s"The forenames of the taxpayers are: $foreNames")
 
+  //TASK 3
+  def count(taxpayer: String, inputSeq: Seq[String]): Int = {
+    inputSeq.count(_ == taxpayer)
+  }
+  val aliceCount = count("Alice", foreNames)
+
+  //TASK 4
+  println(s"Alice submitted her tax returns $aliceCount time(s).")
+
+  //TASK 5
+  val foreNamesSet = foreNames.toSet
+
+  //TASK 6
+  println(s"The forenames of unique taxpayers are: $foreNamesSet")
+
+  //TASK 7
+  def countIt(taxpayer: String, inputSeq: Iterable[String]): Int = {
+    inputSeq.count(_ == taxpayer)
+  }
+  val aliceCountSeq = countIt("Alice", foreNames)
+  val aliceCountSet = countIt("Alice", foreNamesSet)
+
+  //TASK 8
+  println(s"Alice submitted her taxes $aliceCountSeq time(s)")
+  println(s"Alice submitted her taxes $aliceCountSet time(s)")
+
+  //TASK 9
+  //a
+  val userFailedLogin: Map[String, Int] = Map(
+    "Alice" -> 2,
+    "Bob" -> 1,
+    "Charlie" -> 3,
+    "David" -> 2,
+    "Elise" -> 1,
+    "Frank" -> 3
+  )
+
+  //b
+  val userAt0 = userFailedLogin.toSeq.head
+  println(s"The user ${userAt0._1} has ${userAt0._2} failed attempts.")
+
+  //c
+  val addNewUser = userFailedLogin + ("Tom" -> 3)
+  println(addNewUser)
+
+  //d
+  val keyAt1 = addNewUser.toSeq(1)._1
+  val updateAt2 = addNewUser.updated(keyAt1, addNewUser(keyAt1) + 1)
+  println(updateAt2)
+
+  //e
+  val keyAt5 = updateAt2.toSeq(5)._1
+  val removeAt5 = updateAt2 - keyAt5
+  println(removeAt5)
+
+  //EXTENSION TASKS
+  //TASK 1
+
+  val day1Submission: Set[String] = Set("Alice", "Bob", "Charlie", "David", "Frank")
+  val day2Submission: Set[String] = Set("Charlie", "Eve", "Bob", "Frank", "Alice")
+
+  //a
+  val bothDays = day1Submission.intersect(day2Submission)
+  println(s"Submitted on both days: $bothDays")
+
+  //b
+  val onlyDay1 = day1Submission.diff(day2Submission)
+  println(s"Submitted on day 1 only: $onlyDay1")
+
+  val allUnique = day1Submission.union(day2Submission)
+  println(s"All unique submitters: $allUnique")
 
 
 }
