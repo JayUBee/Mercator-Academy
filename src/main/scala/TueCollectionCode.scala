@@ -223,4 +223,28 @@ object TueCollectionCode extends App {
   println(s"All unique submitters: $allUnique")
 
 
+  //RESEARCH TASKS
+  //TASK 2
+  //Map.get
+  val m1 = Map("Hello" -> 1, "World" -> 2, "All" -> 3)
+  val result = m1.get("Hello")
+  println("Map.get: " + result)
+
+  //Map(key)
+  val result2 = m1("Hello")
+  println("Map(key): " + result2)
+
+  //ALTERNATIVELY...
+  val result3 = m1.keys
+  println("Map.keys: " + result3)
+
+  //Map.getOrElse
+  val m2 = Map("Hello" -> 1, "World" -> 2)
+  val world = m2.getOrElse("World", 0)
+  println("Map.getOrElse (exists): " + world)
+  val all = m2.getOrElse("All", 0)
+  println("Map.getOrElse (doesn't exist): " + all)
+
+
+
 }
