@@ -1,4 +1,0 @@
-object WednesayTasks extends App{
-
-
-}
