@@ -84,5 +84,4 @@ object WedHandlingMultipleOptions extends App {
   } catch {
     case error: NumberFormatException => println(s"$error was not a valid input.") //often see error as 'e'
   }
-
 }
