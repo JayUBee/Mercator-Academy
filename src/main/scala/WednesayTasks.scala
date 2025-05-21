@@ -1,0 +1,4 @@
+object WednesayTasks extends App{
+
+
+}
