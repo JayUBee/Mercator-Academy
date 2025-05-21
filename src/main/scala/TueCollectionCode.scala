@@ -219,6 +219,7 @@ object TueCollectionCode extends App {
   val onlyDay1 = day1Submission.diff(day2Submission)
   println(s"Submitted on day 1 only: $onlyDay1")
 
+  //c
   val allUnique = day1Submission.union(day2Submission)
   println(s"All unique submitters: $allUnique")
 
