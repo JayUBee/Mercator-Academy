@@ -1,6 +1,4 @@
-import WedHandlingMultipleOptions.age
-
-import java.lang.System.console
+package Wednesday
 
 object WedHandlingMultipleOptions extends App {
 

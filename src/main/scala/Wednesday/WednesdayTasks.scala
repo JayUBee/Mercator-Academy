@@ -1,3 +1,5 @@
+package Wednesday
+
 object WednesdayTasks extends App {
 
 

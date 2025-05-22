@@ -1,3 +1,5 @@
+package Monday
+
 object MondayCode extends App {
   // VAL = BEST PRACTICE!!
   val melons = 5 * 50

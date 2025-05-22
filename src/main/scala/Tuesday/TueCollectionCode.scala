@@ -1,3 +1,5 @@
+package Tuesday
+
 object TueCollectionCode extends App {
 
   val firstSet: Set[Int] = Set(1, 2, 3, 4, 5, 5) // Not ordered, does not allow repeats
