@@ -3,7 +3,7 @@ object WednesdayTasks extends App {
 
   //MVP TASK
   //TASK 1-a,b,c
-  val numWatermelon: Int = 5
+  val numWatermelon: Int = 4
   numWatermelon match {
     case num if num < 0 => println(s"Invalid entry, It is impossible for John to carry $numWatermelon watermelons, please enter a positive number.")
     case num if num == 0 => println("John is carrying 0 watermelons, he does not need a bag or the melons.")
@@ -35,7 +35,7 @@ object WednesdayTasks extends App {
 
   //TASK 2
   try {
-    val miles = "thirty".toInt
+    val miles = "30".toInt
     val toBePaid: Double = miles * 0.45
     println(s"you will be paid £$toBePaid.")
   }
