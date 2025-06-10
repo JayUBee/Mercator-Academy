@@ -41,7 +41,6 @@ object AfternoonTasks extends App{
   linkText.click()
   println("Link text clicked.")
 
-
   driver.quit()
 
 }
