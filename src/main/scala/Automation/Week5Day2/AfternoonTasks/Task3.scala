@@ -2,6 +2,9 @@ package Automation.Week5Day2.AfternoonTasks
 
 import org.openqa.selenium.{By, JavascriptExecutor, Point, WebDriver, WebElement}
 import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.support.ui.{ExpectedConditions, WebDriverWait}
+
+import java.time.Duration
 
 object Task3 extends App{
 
@@ -28,6 +31,10 @@ object Task3 extends App{
 
   val hobbies: WebElement = driver.findElement(By.xpath("//label[@for='hobbies-checkbox-2']"))
   println("Hobbies checkbox located! \n")
+
+  val js = driver.asInstanceOf[JavascriptExecutor]
+  js.executeScript("document.querySelectorAll('iframe').forEach(el => el.remove());")
+  println("Ad iframes removed.")
 
 
   if(firstName.isDisplayed && firstName.isEnabled) {
