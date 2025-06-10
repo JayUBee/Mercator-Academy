@@ -26,15 +26,11 @@ object Task3 extends App{
   val firstName: WebElement = driver.findElement(By.id("firstName"))
   println("First Name located!")
 
-  val submitBtn: WebElement = driver.findElement(By.cssSelector("#submit"))
-  println("Submit button located!")
+  //val submitBtn: WebElement = driver.findElement(By.cssSelector("#submit"))
+  //println("Submit button located!")
 
   val hobbies: WebElement = driver.findElement(By.xpath("//label[@for='hobbies-checkbox-2']"))
   println("Hobbies checkbox located! \n")
-
-  val js = driver.asInstanceOf[JavascriptExecutor]
-  js.executeScript("document.querySelectorAll('iframe').forEach(el => el.remove());")
-  println("Ad iframes removed.")
 
 
   if(firstName.isDisplayed && firstName.isEnabled) {
@@ -52,10 +48,14 @@ object Task3 extends App{
   else {
     println("Checkbox already selected.")
   }
+
+
+  val submitBtn: WebElement = driver.findElement(By.cssSelector("#submit"))
+  println("Submit button located!")
+
   if(submitBtn.isDisplayed && submitBtn.isEnabled){
     submitBtn.click()
-    println("Submit button is visible and enabled, submission completed!")
-  }
+    println("Submit button is visible and enabled, submission completed!") }
 
   driver.close()
   println("Browser closed!")
