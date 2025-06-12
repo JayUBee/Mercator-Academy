@@ -29,5 +29,5 @@ object AfternoonTasks extends App{
 
 
 
-  //driver.quit()
+  driver.quit()
 }
