@@ -19,6 +19,7 @@ object HandleWindows extends App {
 
   val allWindows: List[String] = driver.getWindowHandles.asScala.toList
   val it = allWindows.iterator
+  println("All windows: " + allWindows.mkString(" | "))
 
   while (it.hasNext) {
     val handle = it.next()

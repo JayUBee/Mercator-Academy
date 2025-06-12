@@ -11,7 +11,7 @@ object JavaScriptExecutor extends App{
 
   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10))
 
-  
+
   driver.get("https://proleed.academy/exercises/selenium/selenium-element-id-locators-practice-form.php")
   //driver.manage().window().setPosition(new Point(-1920, 0))
   //driver.manage().window().setSize(new Dimension(960, 1080))
@@ -25,11 +25,11 @@ object JavaScriptExecutor extends App{
   println("Password entered - Passed")
 
   val submitBtn = driver.findElement(By.id("login"))
-  submitBtn.click()
+  //submitBtn.click()
 
-  //val js = driver.asInstanceOf[JavaScriptExecutor]
-  //js.executeScript("arguments[0].scrollIntoView(true);", submitBtn)
-  //js.executeScript("arguments[0].click();", submitBtn)
+  val js = driver.asInstanceOf[JavascriptExecutor]
+  js.executeScript("arguments[0].scrollIntoView(true);", submitBtn)
+  js.executeScript("arguments[0].click();", submitBtn)
 
   val header = driver.findElement(By.tagName("h2")).getText
   assert(header == "Thank You!")
