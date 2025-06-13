@@ -62,5 +62,38 @@ object LoopPractice extends App {
     }
   }
 
+  //TABLES
+  <table>
+    <tr>
+      <td>Apple</td> <td>Red</td>
+    </tr>
+    <tr>
+      <td>Banana</td> <td>Yellow</td>
+    </tr>
+  </table>
+
+  //looping through table rows
+  val rows = driver.findElements(By.tagName("tr")) //find all elements contained within 'tr' tags (rows)
+  for ((row, index) <- rows.asScala.zipWithIndex){
+    val cells = row.findElements(By.tagName("td")) //this is taking all the rows that have been found, going
+    //inside those rows, and pulling out every 'td' tag.
+
+    //cells = List("Apple", "Red", "0", "Banana", "Yellow", "1")
+    val makeString = cells.asScala.map(_.getText).mkString(" , ".trim) //"Apple , Red , 0 , Banana , Yellow , 1"
+    println(makeString)
+  }
+
+  //zipWithIndex Method
+  //Pair each row with its index (starting from 0)
+  // Row 0: Apple | Red
+  //Row 1: Banana | Yellow
+
+  // Does a value exist?
+  val doesBananaExist = rows.asScala.exists{ row =>
+    val cells = row.findElements(By.tagName("td")).asScala
+    cells.exists(_.getText == "Banana")
+  }
+  assert(doesBananaExist, "Yay bananas!")
+
 
 }
