@@ -1,4 +1,4 @@
-package Wednesday
+package Scala.Wednesday
 
 object WedHandlingMultipleOptions extends App {
 

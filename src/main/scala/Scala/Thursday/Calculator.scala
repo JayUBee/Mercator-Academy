@@ -1,4 +1,4 @@
-package Thursday
+package Scala.Thursday
 
 class Calculator {
 

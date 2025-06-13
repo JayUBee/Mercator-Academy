@@ -1,6 +1,6 @@
 package Automation.Week5Day2
 
-import org.openqa.selenium.{By, WebDriver, WebElement}
+import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 
 object BrowserMethods extends App {

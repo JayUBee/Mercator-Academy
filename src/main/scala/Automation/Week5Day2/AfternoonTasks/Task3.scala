@@ -1,10 +1,7 @@
 package Automation.Week5Day2.AfternoonTasks
 
-import org.openqa.selenium.{By, JavascriptExecutor, Point, WebDriver, WebElement}
 import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.support.ui.{ExpectedConditions, WebDriverWait}
-
-import java.time.Duration
+import org.openqa.selenium.{By, WebDriver, WebElement}
 
 object Task3 extends App{
 

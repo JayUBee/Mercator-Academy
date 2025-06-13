@@ -1,7 +1,7 @@
 package Automation.tinkering
 
-import org.openqa.selenium.{By, WebDriver, WebElement}
 import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.{By, WebDriver, WebElement}
 
 object FaceBook extends App {
 
