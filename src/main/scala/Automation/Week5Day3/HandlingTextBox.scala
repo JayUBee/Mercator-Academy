@@ -1,7 +1,7 @@
 package Automation.Week5Day3
 
-import org.openqa.selenium.{By, WebDriver, WebElement}
 import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.{By, WebDriver, WebElement}
 
 object HandlingTextBox extends App{
 

@@ -1,8 +1,8 @@
 package Automation.Week5Day1
 
-import org.openqa.selenium.{By, WebDriver, WebElement}
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.support.ui.{ExpectedConditions, WebDriverWait}
+import org.openqa.selenium.{By, WebDriver, WebElement}
 
 import java.time.Duration
 

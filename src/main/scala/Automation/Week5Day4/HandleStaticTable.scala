@@ -1,9 +1,7 @@
 package Automation.Week5Day4
 
-import Automation.Week5Day4.HandleStaticTable.rows
-import org.openqa.selenium.{By, WebDriver}
 import org.openqa.selenium.chrome.ChromeDriver
-import sun.jvm.hotspot.runtime.BasicObjectLock.size
+import org.openqa.selenium.{By, WebDriver}
 
 object HandleStaticTable extends App{
 

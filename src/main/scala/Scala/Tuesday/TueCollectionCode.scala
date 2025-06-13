@@ -1,4 +1,4 @@
-package Tuesday
+package Scala.Tuesday
 
 object TueCollectionCode extends App {
 

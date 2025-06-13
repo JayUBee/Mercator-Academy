@@ -1,4 +1,4 @@
-package Monday
+package Scala.Monday
 
 object MondayCode extends App {
   // VAL = BEST PRACTICE!!

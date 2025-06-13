@@ -3,8 +3,6 @@ package Automation.Week5Day4
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.{By, JavascriptExecutor, WebDriver, WebElement}
 
-import java.time.Duration
-
 object JavaScriptExecutor extends App{
 
   val driver: WebDriver = new ChromeDriver()

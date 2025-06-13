@@ -1,7 +1,7 @@
 package Automation.Week5Day3.AfternoonTasks
 
-import org.openqa.selenium.{By, WebDriver}
 import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.{By, WebDriver}
 
 object AfternoonTaskEXT extends App {
 
