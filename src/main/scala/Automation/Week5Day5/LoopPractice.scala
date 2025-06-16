@@ -63,14 +63,16 @@ object LoopPractice extends App {
   }
 
   //TABLES
-  <table>
-    <tr>
-      <td>Apple</td> <td>Red</td>
-    </tr>
-    <tr>
-      <td>Banana</td> <td>Yellow</td>
-    </tr>
-  </table>
+
+
+ // <table>
+ //   <tr>
+ //     <td>Apple</td> <td>Red</td>
+ //   </tr>
+ //   <tr>
+ //     <td>Banana</td> <td>Yellow</td>
+ //   </tr>
+ // </table>
 
   //looping through table rows
   val rows = driver.findElements(By.tagName("tr")) //find all elements contained within 'tr' tags (rows)
