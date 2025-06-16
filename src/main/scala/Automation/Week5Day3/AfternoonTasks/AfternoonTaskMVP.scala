@@ -1,9 +1,8 @@
 package Automation.Week5Day3.AfternoonTasks
 
-import Automation.Week5Day3.HandlingDropDown.select
-import org.openqa.selenium.{By, WebDriver, WebElement}
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.support.ui.Select
+import org.openqa.selenium.{By, WebDriver, WebElement}
 
 object AfternoonTaskMVP extends App{
 

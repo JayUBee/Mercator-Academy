@@ -1,7 +1,7 @@
 package Automation.Week4Day4
 
-import org.openqa.selenium.{By, WebDriver, WebElement}
 import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.{By, WebDriver, WebElement}
 
 object MorningTask extends App{
 
